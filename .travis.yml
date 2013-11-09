@@ -4,8 +4,8 @@ jdk:
   - oraclejdk7
 
 before_install:
-  - sudo less /etc/postgresql/9.1/main/pg_hba.conf
-  - sudo less /etc/postgresql/9.1/main/postgresql.conf
+  - sudo cat /etc/postgresql/9.1/main/pg_hba.conf
+  - sudo cat /etc/postgresql/9.1/main/postgresql.conf
   - psql -c 'select * from pg_group;' -U postgres
   - psql -c 'select * from pg_user;' -U postgres
   - mysql -e 'SELECT * FROM mysql.user;'
